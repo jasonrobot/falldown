@@ -6,11 +6,10 @@ local Line = {}
 -- so this is actually going to need to make two lines (or more) with a space inbetween
 function Line.new(world, y)
    local x = love.window.getMode()
-   local gapWidth = 40
+   local gapWidth = 80
    -- get a random number between gapWidth/2 and x-(gapWidth/2)
    local gapX = math.floor(math.random(gapWidth/2, x-(gapWidth/2)))
-   print(gapX)
-
+   
    local l1 = {}
    local l1w = gapX - (gapWidth/2)
    local l1x = l1w/2
@@ -25,8 +24,6 @@ function Line.new(world, y)
    l2.shape = love.physics.newRectangleShape(l2w, 5)
    l2.fixture = love.physics.newFixture(l2.body, l2.shape, 1)
 
-   print(l1x, l1w)
-   print(l2x, l2w)
    return l1, l2
 end
 
