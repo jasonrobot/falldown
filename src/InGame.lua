@@ -1,16 +1,16 @@
 --- InGame.lua
 -- the gamestate where all gameplay takes place
-Signal = require('signal')
-local Timer = require('timer')
-local Camera = require('camera')
+Signal = require('lib.hump.signal')
+local Timer = require('lib.hump.timer')
+local Camera = require('lib.hump.camera')
 local P = love.physics
-local Gamestate = require('gamestate')
+local Gamestate = require('lib.hump.gamestate')
 
 -- gamestates
-local gameOver = require('GameOver')
+local gameOver = require('src.GameOver')
 
-local Player = require('Player')
-local Line = require('Line')
+local Player = require('src.Player')
+local Line = require('src.Line')
 
 --gamestate table
 local state = {}

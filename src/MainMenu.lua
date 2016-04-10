@@ -1,9 +1,9 @@
 --- MainMenu.lua
 -- Handles the main menu for the program.
-local Gamestate = require 'gamestate'
+local Gamestate = require 'lib.hump.gamestate'
 local G = love.graphics
 
-local InGame = require "InGame"
+local InGame = require "src.InGame"
 
 local state = {}
 
