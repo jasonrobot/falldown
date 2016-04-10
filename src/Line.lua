@@ -16,6 +16,7 @@ function Line.new(world, y)
    l1.body = love.physics.newBody(world, l1x, y, 'static')
    l1.shape = love.physics.newRectangleShape(l1w, 5)
    l1.fixture = love.physics.newFixture(l1.body, l1.shape, 1)
+   l1.fixture:setFriction(0.5)
 
    local l2 = {}
    local l2w = x - (gapX + (gapWidth/2))
@@ -23,6 +24,7 @@ function Line.new(world, y)
    l2.body = love.physics.newBody(world, l2x, y, 'static')
    l2.shape = love.physics.newRectangleShape(l2w, 5)
    l2.fixture = love.physics.newFixture(l2.body, l2.shape, 1)
+   l2.fixture:setFriction(0.5)
 
    return l1, l2
 end
