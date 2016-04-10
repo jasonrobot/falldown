@@ -27,6 +27,8 @@ local cam
 local camY
 -- where to draw the next line
 local nextLineY
+
+local gameSpeed = 80
 local score = 0
 local x, y = love.window.getMode()
 
@@ -62,7 +64,7 @@ function state:update(dt)
    local lowerBound = 50
    if player.body:getY() < camY + (y/2) - lowerBound then
       -- player is behind the camera bottom
-      camY = camY + (75 * dt)
+      camY = camY + (gameSpeed * dt)
    else
       camY = camY + (player.body:getY() - (camY + (y/2) - lowerBound))
    end

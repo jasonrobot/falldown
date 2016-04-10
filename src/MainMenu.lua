@@ -28,10 +28,10 @@ function state.draw()
 end
 
 function state:keypressed(key, code)
-   if key == 'down' then
+   if key == 'down' and selectedOptionIndex < #menuOptions then
       selectedOptionIndex = selectedOptionIndex + 1
    end
-   if key == 'up' then
+   if key == 'up' and selectedOptionIndex > 1 then
      selectedOptionIndex = selectedOptionIndex - 1
    end
    if key == 'return' then
