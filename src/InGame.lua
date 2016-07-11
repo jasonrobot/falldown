@@ -77,7 +77,7 @@ function state:update(dt)
    --add lines if needed
    if nextLineY-50 < camY + (y/2) then
       local a, b = Line.new(world, nextLineY)
-      nextLineY = nextLineY + 100
+      nextLineY = nextLineY + 300
       table.insert(lines, a)
       table.insert(lines, b)
    end
